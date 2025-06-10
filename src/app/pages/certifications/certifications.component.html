@@ -1,0 +1,14 @@
+<section class="certifications-section">
+  <h2>Certifications & Education</h2>
+
+  <div class="cert-grid">
+    <div class="cert-card" *ngFor="let cert of certs">
+      <h3>{{ cert.name }}</h3>
+      <p *ngIf="cert.course"><strong>Course:</strong> {{ cert.course }}</p>
+      <p><strong>Institution:</strong> {{ cert.org }}</p>
+      <p *ngIf="cert.duration"><strong>Duration:</strong> {{ cert.duration }}</p>
+      <p *ngIf="cert.code"><strong>Verification Code:</strong> {{ cert.code }}</p>
+      <a *ngIf="cert.link" [href]="cert.link" target="_blank" class="verify-link">Verify</a>
+    </div>
+  </div>
+</section>

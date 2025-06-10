@@ -1,0 +1,19 @@
+<section class="projects-section">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+
+      <div *ngIf="project.skills?.length" class="skills-used">
+        <strong>Skills:</strong>
+        <ul>
+          <li *ngFor="let skill of project.skills">{{ skill }}</li>
+        </ul>
+      </div>
+
+      <a *ngIf="project.link" [href]="project.link" target="_blank" class="project-link">View Project</a>
+    </div>
+  </div>
+</section>
